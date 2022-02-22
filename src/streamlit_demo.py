@@ -9,7 +9,7 @@ from copy import deepcopy
 st.title("Renewable Power Plans in Switzerland")
 st.header("Power Plants DataFrame")
 
-clean_energy_ch_raw = pd.read_csv("/Users/francopallitto/Documents/sit_academy_streamlit/data/raw/renewable_power_plants_CH.csv")
+clean_energy_ch_raw = pd.read_csv("../sit_academy_streamlit/data/raw/renewable_power_plants_CH.csv")
 clean_energy_ch = clean_energy_ch_raw
 
 if st.checkbox("Show Dataframe"):
@@ -18,7 +18,7 @@ if st.checkbox("Show Dataframe"):
 
 st.subheader("Number of Clean Energy Sources per Canton")
 
-with open("/Users/francopallitto/Documents/sit_academy_streamlit/data/raw/georef-switzerland-kanton.geojson") as response:
+with open("../sit_academy_streamlit/data/raw/georef-switzerland-kanton.geojson") as response:
     cantons = json.load(response)
 cantons_dict = {'TG':'Thurgau', 'GR':'Graubünden', 'LU':'Luzern', 'BE':'Bern', 'VS':'Valais',
                 'BL':'Basel-Landschaft', 'SO':'Solothurn', 'VD':'Vaud', 'SH':'Schaffhausen', 'ZH':'Zürich',
